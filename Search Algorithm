@@ -1,0 +1,324 @@
+//List and Searching algorithm
+//This algorithm was fixed for the class CS-260 Data Structures and Algorithms 
+//Copyright: Copyright © 2017 SNHU COCE
+
+// Name : LinkedList.cpp
+// Author: Raul Ramirez
+// Description: Lists and Searching
+
+#include <algorithm>
+#include <iostream>
+#include <time.h>
+
+#include "CSVparser.hpp"
+
+using namespace std;
+
+// The definitions, methods, and classes can be seen in here
+
+// The declarations are here
+double strToDouble(string str, char ch);
+
+// In here, a structure that holds the bid data was created
+struct Bid {
+    string bidId; 
+    string title;
+    string fund;
+    double amount;
+    Bid() {
+        amount = 0.0;
+    }
+};
+
+// Here is the linked-list class 
+// Defining the class that has the methods to perform the linked-list
+ 
+class LinkedList {
+
+private:
+    //Here is the internal structure for the list entries 
+struct node { 
+    Bid bid;
+    node* nextNode;
+};
+    node* head;
+    node* tail;
+    int size = 0;
+    
+public:
+    LinkedList();
+    virtual ~LinkedList();
+    void Append(Bid bid);
+    void Prepend(Bid bid);
+    void PrintList();
+    void Remove(string bidId);
+    Bid Search(string bidId);
+    int Size();
+};
+
+// Here starts the default constructor
+ 
+LinkedList::LinkedList() {
+    // Initializes housekeeping variables.
+    head = nulptr;
+    tail = nullptr;
+}
+
+// Here starts the default destructor 
+
+LinkedList::~LinkedList() {
+}
+
+//Appending a new bid in the list
+
+void LinkedList::Append(Bid bid) {
+    // Implementing the appended logic
+    node* nodeNew = new node(bid);
+    tail = node;
+    
+    if (head == nullptr)
+        head = nextNode;
+    } 
+    else {
+        if (tail != nullptr) {
+            tail->nextNode = nodeNew; 
+        }
+    } 
+    size++;       
+}
+
+// In here a new new bid was prepended
+
+void LinkedList::Prepend(Bid bid) {
+    // Implementing the prepended logic 
+    node* nodeNew = new node(bid); 
+    nodeNew->nextNode = nullptr;
+
+    if (head == nullptr) {
+        head = nextNode;
+        tail = nodeNew;
+        size++;
+    } 
+    else {
+        nodeNew->nextNode = head;
+        head = nodeNew; 
+        size++;
+    }
+} 
+    
+// Implementing the print logic
+
+void LinkedList::PrintList() {
+    node* entry = head;
+
+    while(entry != nullptr){
+        cout << enrty->bid.bidId << " ! " ;
+        cout << entry->bid.title << " | " ;
+        cout << entry->bid.amount << " | " ;
+        cout << entry->bid.fund << endl;
+        entry = entry->nextNode;
+   }
+}
+
+//Removing the bid bidId 
+void LinkedList::Remove(string bidId) {
+    // Implementing the removing logic
+    node* entry = head; 
+    if (entry == nullptr) {
+        return;
+    }
+    else if (head->bid.bidId == bidId && head->nextNode == nullptr) { 
+        head = nullptr;
+        tail = nullptr;
+        delete entry;
+    }
+    else {
+        while (entry->bid.bidID != bidId) { 
+          prevNode = entry
+          entry = entry-> nextNode;
+        }
+        prevNode->nextNode = entry->nextNode;
+        delete entry;
+    }
+}
+
+ //Searching the bid bidId 
+ Bid LinkedList::Search(string bidId) {
+    // Here is the Implemented search logic 
+    node* entry = head;
+    node* current = new node;
+    current->bid.bidId = "";
+    
+    while(entry != nullptr) {
+        cout << entry->bid.bidId << endl;
+        if (entry->bid.bidId == bidId) {
+           return entry->data;
+        }
+        entry = entry->nextNode;
+   }
+   return current->data;
+}
+
+ // Returning the number of elements
+int LinkedList::Size() {
+    return size;
+}
+
+// Here is the static methods used to do the testing
+
+ //Displaying the bid data bid that has the bid info
+ 
+void displayBid(Bid bid) {
+    cout << bid.bidId << ": " << bid.title << " | " << bid.amount
+         << " | " << bid.fund << endl;
+    return;
+}
+
+ // Prompting the users for the bid data @return Bid struct 
+ Bid getBid() {
+    Bid bid;
+
+    cout << "Enter Id: ";
+    cin.ignore();
+    getline(cin, bid.bidId);
+
+    cout << "Enter title: ";
+    getline(cin, bid.title);
+
+    cout << "Enter fund: ";
+    cin >> bid.fund;
+
+    cout << "Enter amount: ";
+    cin.ignore();
+    string strAmount;
+    getline(cin, strAmount);
+    bid.amount = strToDouble(strAmount, '$');
+
+    return bid;
+}
+
+ //Loading the CSV file 
+void loadBids(string csvPath, LinkedList *list) {
+    cout << "Loading CSV file " << csvPath << endl;
+
+    // Here initializes the CSV Parser
+    csv::Parser file = csv::Parser(csvPath);
+
+    try {
+        // Here on can see the loop thar reads the rows of the CSV file
+        for (int i = 0; i < file.rowCount(); i++) {
+
+            // Here initializes the bid using the information from current row 
+            Bid bid;
+            bid.bidId = file[i][1];
+            bid.title = file[i][0];
+            bid.fund = file[i][8];
+            bid.amount = strToDouble(file[i][4], '$');
+
+            cout << bid.bidId << ": " << bid.title << " | " << bid.fund << " | " << bid.amount << endl;
+
+            // Add the bid at the end
+            list->Append(bid);
+        }
+    } catch (csv::Error &e) {
+        std::cerr << e.what() << std::endl;
+    }
+}
+//C function that converts a string to a double 
+ //credit: http://stackoverflow.com/a/24875936
+double strToDouble(string str, char ch) {
+    str.erase(remove(str.begin(), str.end(), ch), str.end());
+    return atof(str.c_str());
+}
+
+int main(int argc, char* argv[]) {
+
+    //Command line arguments
+    string csvPath, bidKey;
+    switch (argc) {
+    case 2:
+        csvPath = argv[1];
+        bidKey = "98109";
+        break;
+    case 3:
+        csvPath = argv[1];
+        bidKey = argv[2];
+        break;
+    default:
+        csvPath = "eBid_Monthly_Sales_Dec_2016.csv";
+        bidKey = "98109";
+    }
+
+    clock_t ticks;
+
+    LinkedList bidList;
+
+    Bid bid;
+
+    int choice = 0;
+    while (choice != 9) {
+        cout << "Menu:" << endl;
+        cout << "  1. Enter a Bid" << endl;
+        cout << "  2. Load Bids" << endl;
+        cout << "  3. Display All Bids" << endl;
+        cout << "  4. Find Bid" << endl;
+        cout << "  5. Remove Bid" << endl;
+        cout << "  9. Exit" << endl;
+        cout << "Enter choice: ";
+        cin >> choice;
+
+        switch (choice) {
+        case 1:
+            bid = getBid();
+            bidList.Append(bid);
+            displayBid(bid);
+
+            break;
+
+        case 2:
+            ticks = clock();
+
+            loadBids(csvPath, &bidList);
+
+            cout << bidList.Size() << " bids read" << endl;
+
+            ticks = clock() - ticks; // current clock ticks minus starting clock ticks
+            cout << "time: " << ticks << " milliseconds" << endl;
+            cout << "time: " << ticks * 1.0 / CLOCKS_PER_SEC << " seconds" << endl;
+
+            break;
+
+        case 3:
+            bidList.PrintList();
+
+            break;
+
+        case 4:
+            ticks = clock();
+
+            bid = bidList.Search(bidKey);
+
+            ticks = clock() - ticks; 
+
+            if (!bid.bidId.empty()) {
+                displayBid(bid);
+            } else {
+              cout << "Bid Id " << bidKey << " not found." << endl;
+            }
+
+            cout << "time: " << ticks << " clock ticks" << endl;
+            cout << "time: " << ticks * 1.0 / CLOCKS_PER_SEC << " seconds" << endl;
+
+            break;
+
+        case 5:
+            bidList.Remove(bidKey);
+
+            break;
+        }
+    }
+
+    cout << "Good bye." << endl;
+
+    return 0;
+}
