@@ -14,11 +14,11 @@ My chief areas of expertise are:
 - Statistical Analysis and Data Mining
 - Computational Graphics and Visualization
 
-I have experience working with the operating systems, Windows, macOS, Linux, UNIX, Ubuntu, and Kali Linux. 
+I have experience working with the operating systems: Windows, macOS, Linux, UNIX, Ubuntu, and Kali Linux. 
 
-I can code with languages, Python, Java, C, C++, UML, and SQL.  
+I can code with the languages: Python, Java, C, C++, UML, and SQL.  
 
-I can also work with the tools and Software, Eclipse, NetBeans, MS Visual Studio, Xcode, Raspberry Pi, Arduino, MongoDB, MySQL, Wireshark, Snort, and several Firewalls and Anti-Malware.
+I can work with these Software and tools: Eclipse, NetBeans, MS Visual Studio, Xcode, Raspberry Pi, Arduino, MongoDB, MySQL, Wireshark, Snort, and several Firewalls and Anti-Malware.
 
 I can speak English, Spanish, and German. 
 
