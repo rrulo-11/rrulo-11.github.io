@@ -33,11 +33,6 @@ frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
-
-Here are the narratives accompanied with the requested artifacts for the class,"CS-499 Computer Science Capstone." It includes a description, justification, and a refelction:
-
-[CS499_FinalProject_RR.docx](https://github.com/rrulo-11/rrulo-11.github.io/files/5439760/CS499_FinalProject_RR.docx)
-
 Here is an example of the work a can do with Java. You can check my repository in order find more examples.
 
 ### Authentication System Source Code (Artifact)
@@ -131,6 +126,10 @@ public class AuthenticationSystem {
 }
 
 ```
+
+Here are the narratives accompanied with the requested artifacts for the class,"CS-499 Computer Science Capstone." It includes a description, justification, and a refelction:
+
+[CS499_FinalProject_RR.docx](https://github.com/rrulo-11/rrulo-11.github.io/files/5439760/CS499_FinalProject_RR.docx)
 
 
 Thank you very much! I really appreciate your time. 
