@@ -12,8 +12,8 @@ public class AuthenticationSystem {
         Scanner readInput = new Scanner(System.in);
         //Declaring the variables 
         int numAttempts = 0;
-/* Creating the while loop that makes the system stays on the login screen until three unsuccessful
-attempts are made, a successful attempt is made, or user exits intentionally */
+        /* Creating the while loop that makes the system stays on the login screen until three unsuccessful
+        attempts are made, a successful attempt is made, or user exits intentionally */
         while(true) {
             // Prompting user to input the username and password
             System.out.println("Enter username: ");
@@ -43,7 +43,7 @@ attempts are made, a successful attempt is made, or user exits intentionally */
                 String columns[] = fileRecords.split("\t");               
                 if(columns[0].trim().equals(userName)) {
                     //Using the hashed passwords in the file
-       //Checking if the password is valid
+                    //Checking if the password is valid
                     if(columns[1].trim().equals(sb.toString())) { 
                     authenticationBoolean = true;
                     //Displaying the role in the file
