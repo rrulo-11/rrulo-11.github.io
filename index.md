@@ -18,11 +18,10 @@ I have experience working with the operating systems, Windows, macOS, Linux, UNI
 
 You can use the [editor on GitHub](https://github.com/rrulo-11/rrulo-11.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
-
+Here is an example of the work a can do. You can check my repository in order find more examples. 
 
 ### Authentication System Source Code (Artifact)
-
-
+ 
 ```markdown
 package authenticationsystem;
 
