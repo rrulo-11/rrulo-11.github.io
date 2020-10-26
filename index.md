@@ -26,21 +26,93 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
-Syntax highlighted code block
+“package authenticationsystem;
 
-# Header 1
-## Header 2
-### Header 3
+//Importing the libraries 
+import java.util.Scanner;
+import java.io.File;
+import java.security.MessageDigest;
 
-- Bulleted
-- List
+//Creating a class named AuthenticationSystem and inserting the method main along with the IOException 
+public class AuthenticationSystem {
+    public static void main(String[] args) throws Exception {
+        //Creating the scanner object to get data from the user
+        Scanner readInput = new Scanner(System.in);
+        //Declaring the variables 
+        int numAttempts = 0;
+/* Creating the while loop that makes the system stays on the login screen until three unsuccessful attempts are made, a successful attempt is made, or user exits intentionally */
+        while(true) {
+            // Prompting user to input the username and password
+            System.out.println("Enter username: ");
+            String userName = readInput.nextLine();
+            System.out.println("Enter password: ");  
+            String original = readInput.nextLine();
+            /* Converting the password using a message digest five (MD5) hash so the 
+            credentials are checked */
+            MessageDigest md = MessageDigest.getInstance("MD5");
+            md.update(original.getBytes());
+            byte[] digest = md.digest();
+            StringBuilder sb;
+            sb = new StringBuilder();
+            for (byte b : digest) {
+                sb.append(String.format("%02x", b & 0xff));
+            }
+            //Declaring the boolean to check if the authentication system is true or false
+            boolean authenticationBoolean = false;
+            //Creating scanner object to open identifications file
+            //Checking credentials against credentials in the credentials file
+            //Passing the path to the file as a parameter
+            File file = new File("/Users/raulramirez/Documents/credentials.txt");
+            Scanner userCredentials = new Scanner(file);
+            //Creating a while loop to retrieve the credentials in the file
+            while(userCredentials.hasNextLine()) {
+                String fileRecords = userCredentials.nextLine();
+                String columns[] = fileRecords.split("\t");               
+                if(columns[0].trim().equals(userName)) {
+                    //Using the hashed passwords in the file
+       //Checking if the password is valid
+                    if(columns[1].trim().equals(sb.toString())) { 
+                    authenticationBoolean = true;
+                    //Displaying the role in the file
+                    //Passing the path to the files as parameters
+                    Scanner roleFile = new Scanner(new File("/Users/raulramirez/Documents/"+ columns[3].trim()+ ".txt"));
+                    while(roleFile.hasNextLine()) {
+                        System.out.println(roleFile.nextLine());
+                    }
+                    break;
+                    }   
+                }
+            }
+            //Allowing user to log out 
+            if(authenticationBoolean) {
+                System.out.println("Are you sure you want to log out? Yes (y) No (n): ");
+                String confirmLogout  = readInput.nextLine();
+                //If user types (y), then exit
+                if(confirmLogout.toLowerCase().charAt(0) == 'y') {
+                    System.out.println("Logged out successfully. ");
+                    break;
+                }
+                else {
+                    authenticationBoolean = false;
+                }
+            }
+            //Else if password is not valid, increment the attempts
+            else {
+                numAttempts++;
+                //If the password is not valid after three attempt, then print the following message
+                if(numAttempts == 3) {
+                    System.out.println("Unable to login. The system is shutting down");
+                    break;
+                }
+                //Else stay on the login screen until successful attempt
+                else {
+                    System.out.println("Please sign in again entering valid credentials!");     
+                }
+            }
+        }
+    }
+}”
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
