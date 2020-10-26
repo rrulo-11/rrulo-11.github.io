@@ -1,6 +1,6 @@
 ## Personal Information
 
-![Raul_Pic](https://user-images.githubusercontent.com/62734127/97199679-8f40be80-17b0-11eb-980a-6df9b569acbd.png)
+
 
 Hello, my name is Raul Ramirez, I come from Mexico and currently I am living in Vienna, Austria. I got a Bachelor Degree in Computer Science with concentration in Information Security from Southern New Hampshire University. 
 
