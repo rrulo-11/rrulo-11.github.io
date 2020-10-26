@@ -125,12 +125,7 @@ public class AuthenticationSystem {
 
 ```
 
-```markdown
+Thank you very much!I really appreciate your time. 
 
- <iframe width="560" height="315" 
-src="https://www.youtube.com/embed/nEl5QBWh8cA" 
-frameborder="0" 
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-allowfullscreen></iframe>
+Looking forward to working with you! 
 
-```
