@@ -22,7 +22,7 @@ I can code with the languages: Python, Java, C, C++, UML, and SQL.
 
 I can work with these Software and tools: Eclipse, NetBeans, MS Visual Studio, Xcode, Raspberry Pi, Arduino, MongoDB, MySQL, Wireshark, Snort, and several Firewalls and Anti-Malware.
 
-I can speak English, Spanish, and German. 
+I can speak: English, Spanish, and German. 
 
 Here is a code review I made for the class, "CS-499 Computer Science Capstone."
 ![](https://www.youtube.com/watch?v=nEl5QBWh8cA&feature=youtu.be)
@@ -34,11 +34,11 @@ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic
 allowfullscreen></iframe>
 
 
-Here are the narratives and theartifacts for the class, "CS-499 Computer Science Capstone." In here, one can see the requested descriptions, justifications, and the reflections. 
+Here are the narratives and the artifacts for the class, "CS-499 Computer Science Capstone." In here, one can see the requested descriptions, justifications, and the reflections. 
 
 [CS499_FinalProject_RR.docx](https://github.com/rrulo-11/rrulo-11.github.io/files/5439760/CS499_FinalProject_RR.docx)
 
-Here is an example of the work a can do with Java. You can check my repository in order find more examples.
+Here is an example of the work I can do with Java. You can check my repository in order to find more examples.
 
 ### Authentication System Source Code (Artifact)
  
