@@ -134,5 +134,5 @@ Here are the narratives and the requeted artifats for the class, "CS-499 Compute
 
 Thank you very much! I really appreciate your time. 
 
-Looking forward to working with you! 
+Looking forward to working with you!
 
