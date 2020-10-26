@@ -14,11 +14,13 @@ My chief areas of expertise are:
 - Statistical Analysis and Data Mining
 - Computational Graphics and Visualization
 
-I have experience working with the operating systems, Windows, macOS, Linux, UNIX, Ubuntu, and Kali Linux. I know the languages, Python, Java, C, C++, UML, and SQL. And I can work with the tools and Software, Eclipse, NetBeans, MS Visual Studio, Xcode, Raspberry Pi, Arduino, MongoDB, MySQL, Wireshark, Snort, and several Firewalls and Anti-Malware.
+I have experience working with the operating systems, Windows, macOS, Linux, UNIX, Ubuntu, and Kali Linux. 
 
-You can use the [editor on GitHub](https://github.com/rrulo-11/rrulo-11.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+I can code with languages, Python, Java, C, C++, UML, and SQL.  
 
-Here is an example of the work a can do. You can check my repository in order find more examples. 
+I can also work with the tools and Software, Eclipse, NetBeans, MS Visual Studio, Xcode, Raspberry Pi, Arduino, MongoDB, MySQL, Wireshark, Snort, and several Firewalls and Anti-Malware.
+
+Here is an example of the work a can do with Java. You can check my repository in order find more examples. 
 
 ### Authentication System Source Code (Artifact)
  
