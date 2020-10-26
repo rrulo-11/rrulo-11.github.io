@@ -1,6 +1,21 @@
 ## Welcome to GitHub Pages
 
+Hello, my name is Raul Ramirez, I come from Mexico and currently I am living in Vienna, Austria. I got a Bachelor Degree in Computer Science with concentration in Information Security from Southern New Hampshire University. 
+
+My chief areas of expertise are:
+
+-Hardware Integration
+-Software Design and Engineering
+-Data Structures and Algorithms 
+-Networking
+-Cybersecurity and secure coding
+-Penetration testing 
+-Database management
+-Statistical Analysis and Data Mining
+-Computational Graphics and Visualization
+
 You can use the [editor on GitHub](https://github.com/rrulo-11/rrulo-11.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
