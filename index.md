@@ -20,6 +20,8 @@ I can code with languages, Python, Java, C, C++, UML, and SQL.
 
 I can also work with the tools and Software, Eclipse, NetBeans, MS Visual Studio, Xcode, Raspberry Pi, Arduino, MongoDB, MySQL, Wireshark, Snort, and several Firewalls and Anti-Malware.
 
+I can speak English, Spanish, and German. 
+
 Here is an example of the work a can do with Java. You can check my repository in order find more examples. 
 
 ### Authentication System Source Code (Artifact)
