@@ -33,6 +33,7 @@ frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
+
 Here are the narratives and theartifacts for the class, "CS-499 Computer Science Capstone." In here, one can see the requested descriptions, justifications, and the reflections. 
 
 [CS499_FinalProject_RR.docx](https://github.com/rrulo-11/rrulo-11.github.io/files/5439760/CS499_FinalProject_RR.docx)
@@ -134,5 +135,5 @@ public class AuthenticationSystem {
 
 Thank you very much! I really appreciate your time. 
 
-### Looking forward to working with you!
+## Looking forward to working with you!
 
