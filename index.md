@@ -23,7 +23,6 @@ I can also work with the tools and Software, Eclipse, NetBeans, MS Visual Studio
 I can speak English, Spanish, and German. 
 
 Here is a code review I made for the class, "CS-499 Computer Science Capstone."
-
 ![](https://www.youtube.com/watch?v=nEl5QBWh8cA&feature=youtu.be)
 
  <iframe width="560" height="315" 
