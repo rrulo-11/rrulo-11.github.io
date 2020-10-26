@@ -24,7 +24,7 @@ I can speak English, Spanish, and German.
 
 Here is a code review I made for the class, "CS-499 Computer Science Capstone."
 
-(https://www.youtube.com/watch?v=nEl5QBWh8cA&feature=youtu.be)
+![](https://www.youtube.com/watch?v=nEl5QBWh8cA&feature=youtu.be)
 
 Here is an example of the work a can do with Java. You can check my repository in order find more examples. 
 
@@ -117,5 +117,14 @@ public class AuthenticationSystem {
         }
     }
 }
+
+```
+
+```markdown
+
+<iframe width="560" height="315" 
+src="https://www.youtube.com/embed/nEl5QBWh8cA" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
 
 ```
