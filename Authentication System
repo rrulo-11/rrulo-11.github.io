@@ -1,3 +1,7 @@
+//Title: Authentication System
+//This source code was retrieved from the, “IT-145 Fundamentals of Application Development” class
+//Author: Raul Ramirez 
+
 package authenticationsystem;
 
 //Importing the libraries 
