@@ -1,0 +1,43 @@
+//PSEUDOCODE: AUTHENTICATION SYSTEM
+//This pseudocode was retrieved from the, “IT-145 Fundamentals of Application Development” class
+//Raul Ramirez
+ 
+//Import classes/import statements
+IMPORT Scanner class to parse types and strings using expressions
+IMPORT FileInputStream to create new input stream
+IMPORT IOException class so one can throw IOException
+ 
+// Insert the method called main along with the IOException
+CLASS AuthenticationSystem
+  INSERT main and throw IOException
+ 
+    DECLARE string for password
+    DECLARE string assigned with null to open credentialsfile
+    DECLARE boolean to check if the authentication is true or false
+ 
+    // Prompt the user to input the username and password
+    WHILE user is on credential screen
+      PRINT enter username
+      GET username
+      PRINT enter password
+      GET password
+ 
+      /* Convert the password using a message digest five (MD5) hash so the 
+      credentials which are located in credentialsfile can be checked */      
+ 
+      CONVERT the password using (MD5) hash using the provided code.
+      ASSIGN input
+        IF password is correct
+          PRINT (Logging in…)
+          DISPLAY the system information located in each role file
+          DISPLAY zookeeper, veterinarian, admin using FileInputStream
+      ELSE IF password is wrong after three attempts
+          PRINT (Unable to login. System is shutting down)
+          EXIT program
+      ELSE IF user chooses to exit
+          PRINT (Logging out…)
+          EXIT program
+      ELSE
+          DISPLAY the credential screen
+END WHILE
+END CLASS
